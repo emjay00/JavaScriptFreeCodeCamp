@@ -1,0 +1,9 @@
+function palindrome(str) {
+  let ne = str.replace(/[\W_]+/g, "").toLowerCase();
+  for (let i = 0; i <= (ne.length / 2) - 1; i++) {
+    if (ne[i] != ne[ne.length - 1 - i]) {
+      return false
+    }
+  } return true
+
+}
