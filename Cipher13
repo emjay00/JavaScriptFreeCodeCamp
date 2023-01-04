@@ -1,0 +1,16 @@
+function rot13(str) {
+
+  var alphabets = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'," ","!","?","."]
+  var alphabets13 = ['N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M'," ","!","?","."]
+  let newt = ""
+  for (let i = 0; i < str.length; i++) {
+    for (let j in alphabets) {
+      if (str[i] == alphabets[j]) {
+        let index = alphabets.indexOf(alphabets[j])
+        newt += alphabets13[index]
+        
+      }
+    }
+  }console.log(newt);
+  return newt;
+}
